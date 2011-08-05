@@ -49,6 +49,7 @@ Cache::Cache()
             "bookNo INTEGER, "
             "chapterNo INTEGER, "
             "html, "
+            "text, "
             "PRIMARY KEY (transCode, langCode, bookCode, chapterNo)"
         ")"
     );
@@ -56,6 +57,11 @@ Cache::Cache()
         "CREATE INDEX IF NOT EXISTS lc_tc_bn_cn ON html "
         "(langCode, transCode, bookNo, chapterNo)"
     );
+
+
+    _stripTags = QRegExp("<.*>");
+    _stripTags.setMinimal(true);
+    _stripSpaces = QRegExp("\\s+");
 }
 
 
@@ -67,13 +73,19 @@ Cache::~Cache()
 void Cache::saveChapter(const Translation* translation, const QString& bookCode, int chapterNo, QString html)
 {
     QSqlQuery insert(_db);
-    insert.prepare("REPLACE INTO html VALUES (:transCode, :langCode, :bookCode, :bookNo, :chapterNo, :html)");
+    insert.prepare("REPLACE INTO html VALUES (:transCode, :langCode, :bookCode, :bookNo, :chapterNo, :html, :text)");
     insert.bindValue(":transCode", translation->code());
     insert.bindValue(":langCode", translation->language()->code());
     insert.bindValue(":bookCode", bookCode);
     insert.bindValue(":bookNo", translation->bookCodes().indexOf(bookCode));
     insert.bindValue(":chapterNo", chapterNo);
     insert.bindValue(":html", html);
+
+    QString text = html;
+    text.replace(_stripTags, " ");
+    text.replace(_stripSpaces, " ");
+    insert.bindValue(":text", text);
+
     if (! insert.exec())
         qDebug() << "Insertion into cache failed";
 }
@@ -127,41 +139,21 @@ int Cache::totalChaptersInCache(const Translation *translation)
 
 
 
-/*
-void Cache::test(const Translation* translation)
-{
-    qDebug() << "TEST";
-
-    QSqlQuery select(_db);
-    select.prepare("SELECT bookCode, chapterNo, langCode, transCode FROM html WHERE langCode=:langCode AND transCode=:transCode AND html LIKE :needle");
-    select.addBindValue(translation->language()->code());
-    select.addBindValue(translation->code());
-    select.addBindValue("beerf");
-    select.exec();
-
-    while (select.next())
-        qDebug() << "FOUND" << select.value(0).toString() << select.value(1).toInt() << select.value(2).toString() << select.value(3).toString();
-}
-*/
-
-
 void Cache::search(Translation* translation, const QString& text)
 {
-    qDebug() << "SEARCH(" << text << ")";
-
     searchStarted();
 
     SearchThread* thread = new SearchThread(translation, text);
-    connect(thread, SIGNAL(matchFound(QString, int)), this, SLOT(onThreadMatchFound(QString, int)));
+    connect(thread, SIGNAL(matchFound(QString, int, QString, int)), this, SLOT(onThreadMatchFound(QString, int, QString, int)));
     connect(thread, SIGNAL(finished()), this, SLOT(onThreadFinished()));
     connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
 
     thread->start();
 }
 
-void Cache::onThreadMatchFound(const QString& bookCode, int chapterNo)
+void Cache::onThreadMatchFound(const QString& bookCode, int chapterNo, QString match, int matchCount)
 {
-    matchFound(bookCode, chapterNo);
+    matchFound(bookCode, chapterNo, match, matchCount);
 }
 
 void Cache::onThreadFinished()

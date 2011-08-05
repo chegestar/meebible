@@ -31,60 +31,31 @@ void SearchThread::run()
 
     QSqlQuery select(_db);
     select.prepare(
-        "SELECT bookCode, chapterNo "
+        "SELECT bookCode, chapterNo, unicodeMatch(:needle, text) as match, matchCount() "
         "FROM html "
-        "WHERE langCode=:langCode AND transCode=:transCode AND html LIKE :needle "
+        "WHERE langCode=:langCode AND transCode=:transCode AND match IS NOT NULL "
         "ORDER BY bookNo, chapterNo"
     );
+    select.addBindValue(_needle);
     select.addBindValue(_langCode);
     select.addBindValue(_transCode);
-    select.addBindValue(_needle);
     if (! select.exec())
         qDebug() << select.lastError().text();
 
     qDebug() << "start";
 
     while (select.next())
-        matchFound(select.value(0).toString(), select.value(1).toInt());
+    {
+        qDebug() << select.value(2).toString() << select.value(3).toInt();
+        matchFound(
+            select.value(0).toString(),
+            select.value(1).toInt(),
+            select.value(2).toString(),
+            select.value(3).toInt()
+        );
+    }
 
     qDebug() << "done";
 
     qDebug() << "elapsed:" << timer.elapsed();
-
-
-/*
-    QElapsedTimer timer;
-    timer.start();
-
-    _db.exec("DROP TABLE IF EXISTS sorted");
-    _db.exec("CREATE TEMPORARY TABLE sorted (id INTEGER PRIMARY KEY, bookCode, chapterNo, html)");
-    QSqlQuery createSorted(_db);
-    createSorted.prepare("INSERT INTO sorted SELECT NULL, bookCode, chapterNo, html FROM html WHERE langCode=:langCode AND transCode=:transCode ORDER BY bookNo");
-    createSorted.addBindValue(_langCode);
-    createSorted.addBindValue(_transCode);
-    createSorted.exec();
-
-    qDebug() << "creating table:" << timer.elapsed();
-
-    QSqlQuery select(_db);
-    select.prepare(
-        "SELECT bookCode, chapterNo "
-        "FROM sorted "
-        "WHERE html LIKE :needle "
-    );
-    select.addBindValue(_needle);
-    if (! select.exec())
-        qDebug() << select.lastError().text();
-
-    qDebug() << "start";
-
-    while (select.next())
-        matchFound(select.value(0).toString(), select.value(1).toInt());
-
-    _db.exec("DROP TABLE sorted");
-
-    qDebug() << "done";
-
-    qDebug() << "elapsed:" << timer.elapsed();
-*/
 }
