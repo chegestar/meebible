@@ -1,0 +1,35 @@
+html
+{
+    -webkit-user-select: none;
+    user-select: none;
+
+    font-size: 150%;
+    font-family: Arial;
+}
+
+.verse
+{
+    display: inline;
+    cursor: pointer
+}
+
+.verse.selected
+{
+    background: #ffc;
+}
+
+.verse-label
+{
+    display: inline;
+    position: relative;
+    top: -.5em;
+    font-size: 65%;
+    font-weight: bold;
+    padding: 0 .2em 0 .3em;
+}
+
+.par
+{
+    margin-top: .8em;
+/*    text-indent: 1em; */
+}
