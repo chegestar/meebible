@@ -1,0 +1,66 @@
+html
+{
+    -webkit-user-select: none;
+    user-select: none;
+
+    font-family: sans-serif;
+}
+
+.verse
+{
+    display: inline;
+    cursor: pointer
+}
+
+.verse.selected
+{
+    background: #ffb;
+}
+.verse.selected .verse-label
+{
+    color: #c00;
+}
+
+.verse-label
+{
+    display: inline-block;
+    position: relative;
+    top: -.5em;
+    font-size: 65%;
+    font-weight: bold;
+    padding: 0 .2em 0 .3em;
+
+    text-indent: 0;
+}
+
+.par
+{
+    margin-top: .8em;
+/*    text-indent: 1em; */
+}
+
+.small, .smallcaps { font-size: 80%; }
+
+.z
+{
+    display: block;
+    margin-left: 60px;
+    text-indent: -20px;
+}
+
+.superscript
+{
+    text-align: center;
+    font-style: italic;
+    font-size: 90%;
+}
+
+.match
+{
+    background: #8f8;
+}
+
+.match.current
+{
+    background: #f88;
+}
