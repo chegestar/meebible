@@ -1,0 +1,61 @@
+meebible (1.2.0) unstable; urgency=low
+
+  * King James Version support
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 05 Jan 2012 16:14:00 +0400
+
+meebible (1.1.1) unstable; urgency=low
+
+  * Russian UI translation updated
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 31 Dec 2011 20:29:00 +0400
+
+meebible (1.1.0) unstable; urgency=low
+
+  * Fix for www.watchtower.org. Large internal refactoring
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 31 Dec 2011 18:48:00 +0400
+
+meebible (1.0.5) unstable; urgency=low
+
+  * Arabic translation added from copticchurch.net
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 24 Dec 2011 16:13:00 +0400
+
+meebible (1.0.4) unstable; urgency=low
+
+  * Latvian translation added from bibele.lv
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 24 Nov 2011 14:51:00 +0400
+
+meebible (1.0.3) unstable; urgency=low
+
+  * "Download Bible" fixed
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 10 Nov 2011 22:25:00 +0400
+
+meebible (1.0.2) unstable; urgency=low
+
+  * Free version added
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 9 Nov 2011 23:50:00 +0400
+
+meebible (1.0.1) unstable; urgency=low
+
+  * UI translated to russian
+
+  * Various small fixes
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 2 Nov 2011 12:20:00 +0400
+
+meebible (1.0.0) unstable; urgency=low
+
+  * Many improvements
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 26 Oct 2011 13:29:00 +0400
+
+meebible (0.3.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Ilya Skriblovsky <Ilya.Skriblovsky@gmail.com>  Thu, 11 Aug 2011 22:00:17 +0400
