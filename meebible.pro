@@ -20,3 +20,7 @@ free:invoker.path = /opt/meebible-free/bin
 !free:invoker.files = meebible-invoker.sh
 !free:invoker.path = /opt/meebible/bin
 INSTALLS += invoker
+
+# Please do not modify the following two lines. Required for deployment.
+include(deployment.pri)
+qtcAddDeployment()

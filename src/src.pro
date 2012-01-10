@@ -5,9 +5,18 @@ QT += core sql network xml xmlpatterns webkit gui declarative
 # DEFINES += DEBUGPATHS
 
 nosearch:DEFINES += NOSEARCH
+free:DEFINES += FREEVERSION
 
-free:DEFINES += FREEVERSION INSTALLPREFIX=\\\"/opt/meebible-free\\\"
-!free:DEFINES += INSTALLPREFIX=\\\"/opt/meebible\\\"
+symbian {
+    DEFINES += SYMBIAN
+
+    free:DEFINES += INSTALLPREFIX=\"/meebible-free\"
+    !free:DEFINES += INSTALLPREFIX=\"/meebible\"
+}
+else {
+    free:DEFINES += INSTALLPREFIX=\\\"/opt/meebible-free\\\"
+    !free:DEFINES += INSTALLPREFIX=\\\"/opt/meebible\\\"
+}
 
 
 TARGET = meebible
@@ -17,15 +26,20 @@ INSTALLS += target
 
 
 
-CONFIG += qdeclarative-boostable
 CONFIG += console
 CONFIG += warn_on
 CONFIG -= debug
 CONFIG -= app_bundle
 
 
-INCLUDEPATH += /usr/include/applauncherd
-LIBS += -licui18n -lsqlite3 -lmdeclarativecache
+LIBS += -lsqlite3
+!nosearch:LIBS += -licui18n
+
+!symbian {
+    CONFIG += qdeclarative-boostable
+    INCLUDEPATH += /usr/include/applauncherd
+    LIBS += -lmdeclarativecache
+}
 
 
 HEADERS +=                  \
@@ -84,3 +98,7 @@ SOURCES += main.cpp         \
 !nosearch:SOURCES +=        \
     SqliteUnicodeSearch.cpp \
     SearchThread.cpp
+
+# Please do not modify the following two lines. Required for deployment.
+include(deployment.pri)
+qtcAddDeployment()

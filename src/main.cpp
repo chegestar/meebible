@@ -3,7 +3,10 @@
 #include <QtDeclarative>
 #include <QtGlobal>
 
-#include <MDeclarativeCache>
+#ifndef SYMBIAN
+    #include <MDeclarativeCache>
+#endif
+
 #include <QElapsedTimer>
 
 #include <QTranslator>
@@ -28,7 +31,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QElapsedTimer timer;
     timer.start();
 
-    QApplication *app = MDeclarativeCache::qApplication(argc, argv);
+    #ifndef SYMBIAN
+        QApplication *app = MDeclarativeCache::qApplication(argc, argv);
+    #else
+        QApplication *app = new QApplication(argc, argv);
+    #endif
     app->setOrganizationName("MeeBible");
     app->setApplicationName("MeeBible");
 
@@ -66,7 +73,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Fetcher>("MeeBible", 0, 1, "Fetcher");
 
 
-    QDeclarativeView* view = MDeclarativeCache::qDeclarativeView();
+    #ifndef SYMBIAN
+        QDeclarativeView* view = MDeclarativeCache::qDeclarativeView();
+    #else
+        QDeclarativeView* view = new QDeclarativeView();
+    #endif
     view->setAttribute(Qt::WA_NoSystemBackground);
 
 
