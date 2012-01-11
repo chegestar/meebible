@@ -2,6 +2,8 @@ import QtQuick 1.1
 import com.meego 1.0
 import com.meego.extras 1.0
 
+import "unicomponents"
+
 Page {
     id: settingsPage
 
@@ -19,12 +21,6 @@ Page {
         __created = true
     }
 
-
-    TumblerButtonStyle {
-        id: tumblerStyleBlue
-
-        textColor: theme.inverted ? '#aaf' : '#006'
-    }
 
 
     Header {
@@ -71,13 +67,11 @@ Page {
                     font.bold: true
                 }
 
-                TumblerButton {
+                UniTumblerButton {
                     text: settings.language.selfname
 
                     x: 40
                     width: parent.width - 80
-
-                    style: tumblerStyleBlue
 
                     onClicked: languageDialog.open()
                 }
@@ -95,13 +89,11 @@ Page {
                     font.bold: true
                 }
 
-                TumblerButton {
+                UniTumblerButton {
                     text: settings.translation.name
 
                     x: 40
                     width: parent.width - 80
-
-                    style: tumblerStyleBlue
 
                     onClicked: transDialog.open()
                 }

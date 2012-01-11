@@ -3,6 +3,8 @@ import com.meego 1.0
 import com.meego.extras 1.0
 import MeeBible 0.1
 
+import "unicomponents"
+
 Page {
     id: page
 
@@ -169,14 +171,10 @@ Page {
 
         color: theme.inverted ? '#000' : '#fff'
 
-        BusyIndicator {
+        UniLargeBusyIndicator {
             id: realBusyIndicator
 
             anchors.centerIn: parent
-
-            platformStyle: BusyIndicatorStyle {
-                size: "large"
-            }
         }
 
         state: "invisible"
@@ -309,29 +307,29 @@ Page {
     tools: ToolBarLayout {
         id: commonTools
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-previous"
             onClicked: bibleView.loadPrevChapter()
         }
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-list"
             onClicked: placeDialog.open()
         }
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-next"
             onClicked: bibleView.loadNextChapter()
         }
 
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-search"
             onClicked: searchDialog.open()
             visible: ! NOSEARCH
         }
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-view-menu"
             onClicked: menu.status == DialogStatus.Closed ? menu.open() : menu.close()
         }
@@ -471,7 +469,7 @@ Page {
 
         visible: false
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-up"
 
             onClicked: {
@@ -492,7 +490,7 @@ Page {
             font.pixelSize: 30
         }
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-down"
 
             onClicked: {
@@ -503,7 +501,7 @@ Page {
             }
         }
 
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-search"
 
             onClicked: searchDialog.open()
