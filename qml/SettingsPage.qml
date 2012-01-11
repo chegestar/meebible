@@ -1,6 +1,6 @@
 import QtQuick 1.1
-import com.meego 1.0
-import com.meego.extras 1.0
+import com.nokia.symbian 1.1
+import com.nokia.extras 1.1
 
 import "unicomponents"
 
@@ -150,8 +150,8 @@ Page {
     Loader {
         id: languageDialog
 
-        width: 10
-        height: 10
+        // width: 10
+        // height: 10
 
         function load() { source = "LanguageDialog.qml" }
 
@@ -170,7 +170,7 @@ Page {
     Loader {
         id: transDialog
 
-        width: 10; height: 10
+        // width: 10; height: 10
 
         function load() { source = "TranslationDialog.qml" }
 
@@ -198,7 +198,7 @@ Page {
 
 
     tools: ToolBarLayout {
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-back"
             onClicked: pageStack.pop()
         }

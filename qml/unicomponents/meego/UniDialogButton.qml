@@ -4,4 +4,6 @@ Button {
     platformStyle: ButtonStyle {
         inverted: true
     }
+
+    __dialogButton: true
 }

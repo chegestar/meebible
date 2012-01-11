@@ -1,5 +1,7 @@
 import QtQuick 1.1
-import com.meego 1.0
+import com.nokia.symbian 1.1
+
+import "unicomponents"
 
 Page {
 
@@ -91,7 +93,7 @@ Page {
     ScrollDecorator { flickableItem: flickable }
 
     tools: ToolBarLayout {
-        ToolIcon {
+        UniToolIcon {
             platformIconId: "toolbar-back"
             onClicked: pageStack.pop()
         }

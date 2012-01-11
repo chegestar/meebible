@@ -4,16 +4,11 @@ QT += core sql network xml xmlpatterns webkit gui declarative
 
 # DEFINES += DEBUGPATHS
 
-nosearch:DEFINES += NOSEARCH
-free:DEFINES += FREEVERSION
-symbian:DEFINES += SYMBIAN
+nosearch: DEFINES += NOSEARCH
+free: DEFINES += FREEVERSION
+symbian: DEFINES += SYMBIAN
 
-symbian {
-    DEFINES += INSTALLPREFIX=\"$$INSTALLDIR\"
-}
-else {
-    DEFINES += INSTALLPREFIX=\\\"$$INSTALLDIR\\\"
-}
+!symbian: DEFINES += INSTALLPREFIX=\\\"$$INSTALLDIR\\\"
 
 
 TARGET = meebible

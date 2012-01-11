@@ -15,6 +15,7 @@ Languages::Languages()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "langs");
     db.setDatabaseName(Paths::langsDB());
+    qDebug() << "langs" << Paths::langsDB();
     if (! db.open())
     {
         qDebug() << "Cannot open langs db";

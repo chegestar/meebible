@@ -1,6 +1,6 @@
 import QtQuick 1.1
-import com.meego 1.0
-import com.meego.extras 1.0
+import com.nokia.symbian 1.1
+import com.nokia.extras 1.1
 import MeeBible 0.1
 
 import "unicomponents"
@@ -240,11 +240,13 @@ Page {
     Loader {
         id: placeDialog
 
-        width: 10; height: 10
+        // width: 10; height: 10
+
+        height: parent.height
 
         function load() { source = "PlaceDialog.qml" }
 
-        function open() { load(); item.open(bibleView.bookCode, bibleView.chapterNo) }
+        function open() { load(); item.doOpen(bibleView.bookCode, bibleView.chapterNo) }
 
         Connections {
             target: placeDialog.item
@@ -560,6 +562,11 @@ Page {
         visualParent: pageStack
 
         MenuLayout {
+            MenuItem {
+                text: "Quit"
+                onClicked: Qt.quit()
+            }
+
             MenuItem {
                 text: qsTr("Copy selected verses")
                 onClicked: {

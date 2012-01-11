@@ -54,6 +54,7 @@ void Cache::openDB()
 {
     _db = QSqlDatabase::addDatabase("QSQLITE", "cache");
     _db.setDatabaseName(Paths::cacheDB());
+    qDebug() << Paths::cacheDB();
     if (! _db.open())
         qDebug() << "Cannot open cache DB";
 

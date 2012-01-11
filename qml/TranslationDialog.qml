@@ -1,10 +1,10 @@
 import QtQuick 1.1
-import com.meego 1.0
+import com.nokia.symbian 1.1
 
 ModelSelectionDialog {
     titleText: qsTr("Select Translation")
 
-    listHeight: 150
+    // listHeight: 150
 
     model: settings.language
 

@@ -1,6 +1,6 @@
 import QtQuick 1.1
 
-import com.meego 1.0
+import com.nokia.symbian 1.1
 
 import "unicomponents"
 
@@ -13,16 +13,16 @@ UniDialog {
 
 
 
-    function open(bookCode, chapterNo) {
+    function doOpen(bookCode, chapterNo) {
         contentItem.state = "bookSelection"
-        if (status == DialogStatus.Closed)
-            status = DialogStatus.Opening
 
         bookList.currentIndex = bookModel.bookCodes().indexOf(bookCode)
         bookList.positionViewAtIndex(bookList.currentIndex, ListView.Center)
 
         chaptersList.currentIndex = chapterNo-1
         chaptersList.positionViewAtIndex(chaptersList.currentIndex, ListView.Contain)
+
+        open()
     }
 
 
@@ -216,8 +216,6 @@ UniDialog {
             UniDialogButton {
                 id: backButton
 
-                __dialogButton: true
-
                 anchors.left: parent.left
                 width: parent.width / 4
                 anchors.bottom: parent.bottom
@@ -229,8 +227,6 @@ UniDialog {
 
             UniDialogButton {
                 id: acceptButton
-
-                __dialogButton: true
 
                 anchors.left: backButton.right
                 anchors.leftMargin: 20

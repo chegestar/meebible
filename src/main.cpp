@@ -26,8 +26,26 @@
 #include "Fetcher.h"
 #include "Settings.h"
 
+
+#include <cstdio>
+void myMessageOutput(QtMsgType type, const char *msg)
+{
+    FILE *f = fopen("c:\\meebible.log", "a");
+    switch (type)
+    {
+        case QtDebugMsg:    fprintf(f, "debug> %s\n", msg); break;
+        case QtWarningMsg:  fprintf(f, "warn > %s\n", msg); break;
+        case QtCriticalMsg: fprintf(f, "crit > %s\n", msg); break;
+        case QtFatalMsg:    fprintf(f, "fatal> %s\n", msg); abort(); break;
+    }
+    fclose(f);
+}
+
+
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
+    qInstallMsgHandler(myMessageOutput);
+
     QElapsedTimer timer;
     timer.start();
 

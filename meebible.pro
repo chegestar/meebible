@@ -25,6 +25,10 @@ free:invoker.files = meebible-invoker-free.sh
 invoker.path = $$INSTALLDIR/bin
 INSTALLS += invoker
 
+
+TARGET.UID3 = 0xe0cd6015
+
+
 symbian {
 # Please do not modify the following two lines. Required for deployment.
 include(deployment.pri)

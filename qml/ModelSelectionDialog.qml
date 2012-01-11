@@ -1,6 +1,6 @@
 import QtQuick 1.1
 
-import com.meego 1.0
+import com.nokia.symbian 1.1
 
 import "unicomponents"
 
@@ -19,8 +19,8 @@ UniDialog {
         width: parent.width
         anchors.horizontalCenter: parent.horizontalCenter
 
-        height: dialog.parent.height * 0.7
-//        height: listView.height < dialog.parent.height * 0.8 ? listView.height : dialog.parent.height * 0.8
+        // height: listView.height < dialog.parent.height * 0.8 ? listView.height : dialog.parent.height * 0.8
+        height: listView.contentHeight < 600 ? listView.contentHeight : 600
 
         ListView {
             id: listView

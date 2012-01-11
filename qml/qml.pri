@@ -1,7 +1,18 @@
-qml.files = qml/*.qml qml/*.png
-qml.path = $$INSTALLDIR/qml
-INSTALLS += qml
+symbian {
+    qml.sources = qml/*.qml qml/*.png
+    qml.path = qml
+    DEPLOYMENT += qml
 
-unicomponents.files = qml/unicomponents/meego/*.qml
-unicomponents.path = $$INSTALLDIR/qml/unicomponents
-INSTALLS += unicomponents
+    unicomponents.sources = qml/unicomponents/symbian/*.qml
+    unicomponents.path = qml/unicomponents
+    DEPLOYMENT += unicomponents
+}
+else {
+    qml.files = qml/*.qml qml/*.png
+    qml.path = $$INSTALLDIR/qml
+    INSTALLS += qml
+
+    unicomponents.files = qml/unicomponents/meego/*.qml
+    unicomponents.path = $$INSTALLDIR/qml/unicomponents
+    INSTALLS += unicomponents
+}
