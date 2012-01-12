@@ -47,9 +47,11 @@ UniDialog {
 
     content: Item {
         id: contentItem
-        width: parent.width
 
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        // anchors.horizontalCenter: parent.horizontalCenter
 
         height: dialog.parent.height * 0.8
 

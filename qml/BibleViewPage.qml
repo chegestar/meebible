@@ -523,7 +523,7 @@ Page {
     Loader {
         id: fetcherDialog
 
-        width: 10; height: 10
+        // width: 10; height: 10
 
         function load() { source = "FetcherDialog.qml" }
         function open() { load(); item.open() }

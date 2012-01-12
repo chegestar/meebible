@@ -3,7 +3,7 @@ symbian {
     qml.path = qml
     DEPLOYMENT += qml
 
-    unicomponents.sources = qml/unicomponents/symbian/*.qml
+    unicomponents.sources = qml/unicomponents/symbian/*.qml qml/unicomponents/symbian/*.png
     unicomponents.path = qml/unicomponents
     DEPLOYMENT += unicomponents
 }

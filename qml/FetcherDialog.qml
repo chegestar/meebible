@@ -56,11 +56,15 @@ UniDialog {
     content: Column {
         id: contentItem
 
-        width: parent.width
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.leftMargin: 14
+        anchors.rightMargin: 14
+
         spacing: 20
 
         Item {
-            width: dialog.width
+            width: parent.width
 
             height: 40
 

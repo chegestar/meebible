@@ -13,8 +13,6 @@ Dialog {
 
     title: [
         Item {
-            id: header
-
             height: 56
             anchors.fill: parent
 
@@ -31,7 +29,7 @@ Dialog {
             Image {
                 id: closeButton
                 anchors.verticalCenter: titleLabel.verticalCenter
-                anchors.right: header.right
+                anchors.right: parent.right
 
                 opacity: closeButtonMouseArea.pressed ? 0.5 : 1.0
 

@@ -131,8 +131,10 @@ Page {
             LabeledSwitch {
                 text: qsTr("Inverted theme")
 
-                checked: theme.inverted
-                onCheckedChanged: theme.inverted = checked
+                // checked: theme.inverted
+                // onCheckedChanged: theme.inverted = checked
+                checked: settingsPage.platformInverted
+                onCheckedChanged: settingsPage.platformInverted = checked
             }
 
             Button {

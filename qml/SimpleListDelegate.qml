@@ -24,6 +24,11 @@ Item {
         id: label
 
         anchors.verticalCenter: parent.verticalCenter
+        // anchors.rightMargin: 20
+
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.leftMargin: 20
         anchors.rightMargin: 20
 
         text: value
@@ -36,6 +41,8 @@ Item {
                 name: "centered"
                 AnchorChanges {
                     target: label
+                    anchors.left: undefined
+                    anchors.right: undefined
                     anchors.horizontalCenter: item.horizontalCenter
                 }
             },
