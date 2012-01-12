@@ -7,3 +7,4 @@ set SBS_HOME=C:\QtSDK\Symbian\tools\sbs
 
 C:\QtSDK\Symbian\SDKs\Symbian3Qt474\epoc32\tools\make release-gcce -w
 C:\QtSDK\Symbian\SDKs\Symbian3Qt474\epoc32\tools\make sis
+C:\QtSDK\Symbian\SDKs\Symbian3Qt474\epoc32\tools\make installer_sis
