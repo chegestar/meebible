@@ -1,0 +1,56 @@
+import QtQuick 1.1
+
+$$QML_IMPORT_QTCOMPONENTS
+
+import \"unicomponents\"
+
+
+UniDialog {
+    id: dialog
+
+    property alias model: listView.model
+
+    property alias header: header.children
+
+    property int selectedIndex: -1
+
+
+    content: Item {
+        id: contentItem
+        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        // FIXME:
+        // height: Math.min(header.height + listView.contentHeight, dialog.parent.height * 0.7)
+        height: Math.min(header.height + listView.contentHeight, 800 * 0.7)
+
+        Item {
+            id: header
+
+            width: parent.width
+            height: childrenRect.height
+        }
+
+        ListView {
+            id: listView
+
+            anchors.top: header.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+
+            clip: true
+
+            cacheBuffer: 70
+
+            delegate: SimpleListDelegate {
+                onClicked: {
+                    selectedIndex = index
+                    dialog.accept()
+                }
+            }
+        }
+
+        ScrollDecorator { flickableItem: listView }
+    }
+}
