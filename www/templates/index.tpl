@@ -36,9 +36,11 @@
                 <li>New World Translation in 42 languages<!-- (from <a href="http://watchtower.org">watchtower.org</a>) --></li>
                 <li>King James Bible</li>
                 <li>New International Bible</li>
+                <li>English Standard Version</li>
                 <li>Russian Synodal Translation</li>
                 <li>Latvian Revised Bible</li>
                 <li>Arabic Smith &amp; Van Dyke Version</li>
+                <li>Svenska Folkbibeln (Swedish People's Bible)</li>
             </ul>
         </p>
 
@@ -79,7 +81,11 @@
         <h2>Source code</h2>
 
         <p>
-            Full source code is available at <a href="https://bitbucket.org/IlyaSkriblovsky/meebible">BitBucket project page</a>.
+            Full source code and bagtracking are available at <a href="https://projects.developer.nokia.com/meebible">MeeBible's page on Nokia Developer</a>.
+        </p>
+
+        <p>
+            You may also fork me on <a href="https://bitbucket.org/IlyaSkriblovsky/meebible">BitBucket</a>.
         </p>
 
         <h2>Support</h2>

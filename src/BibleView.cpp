@@ -8,8 +8,6 @@
 #include <QWebFrame>
 #include <QNetworkAccessManager>
 
-#include <QElapsedTimer>
-
 #include <QDesktopServices>
 
 #ifndef NOSHARE
@@ -32,12 +30,9 @@
 
 
 BibleView::BibleView(QGraphicsItem *parent):
-    QGraphicsWebView(parent), _translation(0), _fontSize(30), _fontName("Nokia"), _loadingChapter(false)
+    QGraphicsWebView(parent), _translation(0), _fontSize(30), _fontName("Nokia"),
+    _loadingChapter(false)
 {
-    QElapsedTimer timer;
-    timer.start();
-
-
     BibleWebPage* page = new BibleWebPage(this);
     page->setLinkDelegationPolicy(QWebPage::DelegateExternalLinks);
     connect(page, SIGNAL(linkClicked(const QUrl&)), this, SLOT(onLinkClicked(const QUrl&)));
