@@ -98,6 +98,7 @@ else
         "tn" =>  "/tn/baebele/",
         "tk" =>  "/tk/kutsalkitap/",
         "xo" =>  "/xo/ibhayibhile/",
+        "yr" =>  "/yr/bibeli/",
         "zu" =>  "/zu/ibhayibheli/",
     );
 
