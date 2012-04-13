@@ -56,6 +56,7 @@ if ($trans != 'nwt')
 else
 {
     $url_prefixes = array(
+        "a" =>   "/a/bible/",
         "af" =>  "/af/bybel/",
         "al" =>  "/al/bible/",
         "bl" =>  "/bl/bible/",
@@ -68,6 +69,7 @@ else
         "d" =>   "/d/bibelen/",
         "o" =>   "/o/bijbel/",
         "e" =>   "/e/bible/",
+        "ef" =>  "/ef/bible/",
         "fi" =>  "/fi/raamattu/",
         "f" =>   "/f/bible/",
         "ge" =>  "/ge/bible/",
@@ -87,6 +89,7 @@ else
         "t" =>   "/t/biblia/",
         "m" =>   "/m/biblia/",
         "u" =>   "/u/bible/",
+        "rea" => "/rea/bible/",
         "sb" =>  "/sb/bible/",
         "su" =>  "/su/bibele/",
         "sv" =>  "/sv/svetopismo/",
@@ -94,9 +97,12 @@ else
         "sr" =>  "/sr/bijbel/",
         "sw" =>  "/sw/biblia/",
         "z" =>   "/z/bibeln/",
+        "tg" =>  "/tg/bibliya/",
         "tn" =>  "/tn/baebele/",
         "tk" =>  "/tk/kutsalkitap/",
+        "v" =>   "/v/biblia/",
         "xo" =>  "/xo/ibhayibhile/",
+        "yr" =>  "/yr/bibeli/",
         "zu" =>  "/zu/ibhayibheli/",
     );
 

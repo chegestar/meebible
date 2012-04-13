@@ -16,7 +16,7 @@
 #include "Language.h"
 #include "Translation.h"
 #include "BibleView.h"
-#include "Fetcher.h"
+#include "Fetcher2.h"
 #include "Settings.h"
 #include "MetaInfoLoader.h"
 #include "Feedback.h"
@@ -24,6 +24,7 @@
 #include "Place.h"
 #include "PlaceAccesser.h"
 #include "StartupTracker.h"
+#include "SearchResultAccesser.h"
 
 #ifdef IAPDONATION
     #include "IAPDonation.h"
@@ -81,6 +82,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     Bookmarks bookmarks;
 
     PlaceAccesser placeAccesser;
+    SearchResultAccesser searchResultAccesser;
 
     QDeclarativeEngine engine;
 
@@ -88,7 +90,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Language>();
     qmlRegisterUncreatableType<Translation>("MeeBible", 0, 1, "Translation", "Translation is abstract");
     qmlRegisterType<BibleView>("MeeBible", 0, 1, "BibleView");
-    qmlRegisterType<Fetcher>("MeeBible", 0, 1, "Fetcher");
+    qmlRegisterType<Fetcher2>("MeeBible", 0, 1, "Fetcher");
 
     qRegisterMetaType<Place>();
 
@@ -117,6 +119,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("feedback", &feedback);
     view->rootContext()->setContextProperty("bookmarks", &bookmarks);
     view->rootContext()->setContextProperty("placeAccesser", &placeAccesser);
+    view->rootContext()->setContextProperty("searchResultAccesser", &searchResultAccesser);
 
     #ifdef FREEVERSION
         view->rootContext()->setContextProperty("freeversion", QVariant(true));

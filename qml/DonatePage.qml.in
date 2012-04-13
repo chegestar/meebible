@@ -21,7 +21,7 @@ Page {
     QueryDialog {
         id: successDialog
 
-        titleText: qsTr(\"Donation made\")
+        titleText: qsTr(\"Donation accepted\")
         message: qsTr(\"Thank you for supporting MeeBible!\") + (SYMBIAN ? \"\\n\" : \"\")
         acceptButtonText: qsTr(\"OK\")
     }
