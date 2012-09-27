@@ -155,7 +155,7 @@ Page {
 
             Label {
                 text: \'<html><style>a{color:\' + (settings.inverted ? \'#8080ff\' : \'#0000ff\') + \'}</style>\' +
-                    qsTr(\'© 2011 Ilya Skriblovsky\') + \'<br>E-Mail: <a href=\"mailto:ilya@meebible.org?subject=MeeBible\">ilya@meebible.org</a></html>\'
+                    qsTr(\'© 2012 Ilya Skriblovsky & Simon Botes\') + \'<br>E-Mail: <a href=\"mailto:ilya@meebible.org?subject=MeeBible\">ilya@meebible.org</a><br/>E-Mail: <a href=\"mailto:simon@meebible.org?subject=MeeBible\">simon@meebible.org</a></html>\'
                 width: parent.width
 
                 onLinkActivated: Qt.openUrlExternally(link)
