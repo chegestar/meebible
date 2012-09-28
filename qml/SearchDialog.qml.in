@@ -1,0 +1,302 @@
+import QtQuick 1.1
+
+$$QML_IMPORT_QTCOMPONENTS
+$$QML_IMPORT_QTCOMPONENTS_EXTRAS
+
+import MeeBible 0.1
+import \"unicomponents\"
+
+Page {
+    id: dialog
+
+
+    property alias query: field.text
+
+    property int maxResults: 150
+
+    signal placeSelected(variant place)
+    signal closed()
+
+
+    function startSearch() {
+        if (field.text == \"\")
+            return
+        if (busyIndicator.visible)
+            return
+
+        list.forceActiveFocus()
+
+        results.clear()
+        busyIndicator.visible = true
+        cache.search(settings.translation, field.text, dialog.maxResults)
+    }
+
+    Connections {
+        target: cache
+
+        onSearchFinished: {
+            results.clear()
+            for (var i = 0; i < found.length; i++)
+            {
+                var place = searchResultAccesser.place(found[i])
+                results.append({
+                    title: placeAccesser.string(place, settings.translation),
+                    subtitle: searchResultAccesser.preview(found[i]),
+                    place: place,
+                    matchCount: searchResultAccesser.matchCount(found[i]),
+                    isLimiter: false
+                })
+            }
+
+            if (found.length == dialog.maxResults)
+            {
+                results.append({
+                    title: \"Too many matches\",
+                    subtitle: \"Search results truncated\",
+                    matchCount: 0,
+                    isLimiter: true
+                })
+            }
+
+            busyIndicator.visible = false
+            item.state = results.count == 0 ? \"nothing\" : \"list\"
+        }
+
+        onRebuildingIndex: {
+            item.state = \"rebuilding\"
+        }
+
+        onIndexRebuilt: {
+            item.state = \"list\"
+        }
+    }
+
+
+    onVisibleChanged: {
+        if (visible && field.text == \"\")
+            field.forceActiveFocus()
+    }
+
+
+    Header {
+        id: header
+
+        UniSearchField {
+            id: field
+
+            placeholderText: qsTr(\"Search...\")
+
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            anchors.rightMargin: 10
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: searchButton.left
+
+
+            Keys.onReturnPressed: dialog.startSearch()
+
+
+            Image {
+                id: image
+
+                source: \"search-infield.png\"
+
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.left: parent.left
+                anchors.rightMargin: 5
+
+                width: height
+            }
+
+            UniTextFieldBusyIndicator {
+                id: busyIndicator
+
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.right: parent.right
+                anchors.rightMargin: 15
+
+                visible: false
+                running: visible
+            }
+        }
+
+        ToolButton {
+            id: searchButton
+
+            text: qsTr(\"Search\")
+            anchors.right: parent.right
+            anchors.rightMargin: 10
+            anchors.verticalCenter: parent.verticalCenter
+
+            onClicked: dialog.startSearch()
+        }
+    }
+
+
+    Item {
+        id: item
+
+
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: header.bottom
+        anchors.bottom: parent.bottom
+
+
+
+        ListView {
+            id: list
+
+            anchors.fill: parent
+
+            clip: true
+
+            cacheBuffer: 70
+
+            model: ListModel {
+                id: results
+            }
+
+            delegate: SubtitledListDelegate {
+                onClicked: {
+                    if (! isLimiter)
+                        dialog.placeSelected(place)
+                }
+
+                clip: true
+
+                x: 10
+                width: parent.width - 20
+
+                Item {
+                    visible: !isLimiter
+
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.topMargin: 15
+
+                    width: 25
+                    height: 25
+
+                    BorderImage {
+                        source: \"countbubble.png\"
+                        anchors.fill: parent
+                        border { left: 10; top: 10; right: 10; bottom: 10 }
+                    }
+
+                    Text {
+                        text: matchCount
+                        color: settings.inverted ? \'#fff\' : \'#000\'
+                        font.pixelSize: 15
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                    }
+                }
+            }
+        }
+        ScrollDecorator { flickableItem: list; }
+
+        Item {
+            id: nothing
+
+            anchors.fill: parent
+
+            Label {
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.left: parent.left
+                anchors.right: parent.right
+
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+
+                text: qsTr(\"Nothing found\")
+                color: settings.inverted ? \'#444\' : \'#888\'
+                font.pixelSize: 60
+                font.family: \"Nokia Pure Text Light\"
+            }
+        }
+
+        Column {
+            id: rebuilding
+
+            width: parent.width
+            anchors.centerIn: parent
+
+            spacing: 20
+
+            Label {
+                width: parent.width
+
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+
+                text: qsTr(\"Rebuilding index...\\nThis is one time operation\")
+                color: settings.inverted ? \"#444\" : \"#888\"
+                font.pixelSize: 40
+                font.family: \"Nokia Pure Text Light\"
+            }
+
+            UniLargeBusyIndicator {
+                id: rebuildingIndicator
+
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                running: rebuilding.visible
+            }
+        }
+
+
+        state: \"list\"
+
+        states: [
+            State {
+                name: \"list\"
+
+                PropertyChanges { target: list; visible: true }
+                PropertyChanges { target: nothing; visible: false }
+                PropertyChanges { target: rebuilding; visible: false }
+            },
+            State {
+                name: \"nothing\"
+
+                PropertyChanges { target: list; visible: false }
+                PropertyChanges { target: nothing; visible: true }
+                PropertyChanges { target: rebuilding; visible: false }
+            },
+            State {
+                name: \"rebuilding\"
+
+                PropertyChanges { target: list; visible: false }
+                PropertyChanges { target: nothing; visible: false }
+                PropertyChanges { target: rebuilding; visible: true }
+            }
+        ]
+    }
+
+
+    QueryDialog {
+        id: helpDialog
+
+        titleText: qsTr(\"Search tips\")
+
+        message: qsTr(\"You can search for multiple words, they will be found even if separated by other words.\\n\\nPlace asterisk after word to find it with all different endings (For example: Abra* for Abram and Abraham)\") + (SYMBIAN ? \"\\n\" : \"\")
+
+        acceptButtonText: qsTr(\"OK\")
+    }
+
+
+    tools: ToolBarLayout {
+        UniToolIcon {
+            platformIconId: \"toolbar-back\"
+            onClicked: {
+                pageStack.pop()
+                closed()
+            }
+        }
+
+        UniToolIcon {
+            platformIconId: \"toolbar-settings\"
+            onClicked: helpDialog.open()
+        }
+    }
+}
