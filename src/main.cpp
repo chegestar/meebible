@@ -25,6 +25,8 @@
 #include "PlaceAccesser.h"
 #include "StartupTracker.h"
 #include "SearchResultAccesser.h"
+#include "MediakeyCaptureItem.h"
+#include "CacheInfo.h"
 
 #ifdef IAPDONATION
     #include "IAPDonation.h"
@@ -48,6 +50,26 @@
 #endif
 
 
+
+
+class CacheConvertThread: public QThread
+{
+    public:
+        CacheConvertThread(Cache* cache): _cache(cache) { }
+
+    protected:
+        virtual void run()
+        {
+            _cache->convertOldCacheDB();
+        }
+
+    private:
+        Cache* _cache;
+};
+
+
+
+
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     #ifdef SYMBIAN
@@ -66,10 +88,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     Paths::init();
 
-    QTranslator translator;
-    translator.load(Paths::translationFile(QLocale::system().name()));
-    app->installTranslator(&translator);
-
     Cache cache;
     MetaInfoLoader metaInfoLoader;
 
@@ -77,12 +95,21 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     Settings settings(&languages);
 
+    QTranslator translator;
+    QString localeName = settings.uiLanguage();
+    if (localeName.isEmpty())
+        localeName = QLocale::system().name();
+    translator.load(QString("meebible_") + localeName, Paths::translationsDir());
+    app->installTranslator(&translator);
+
     Feedback feedback;
 
     Bookmarks bookmarks;
 
     PlaceAccesser placeAccesser;
     SearchResultAccesser searchResultAccesser;
+
+    CacheInfo cacheInfo;
 
     QDeclarativeEngine engine;
 
@@ -93,6 +120,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Fetcher2>("MeeBible", 0, 1, "Fetcher");
 
     qRegisterMetaType<Place>();
+
+
+    qmlRegisterType<MediakeyCaptureItem>("MeeBible", 0, 1, "MediakeyCapture");
 
 
     #ifndef SYMBIAN
@@ -111,6 +141,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("bookmarks", &bookmarks);
     view->rootContext()->setContextProperty("placeAccesser", &placeAccesser);
     view->rootContext()->setContextProperty("searchResultAccesser", &searchResultAccesser);
+    view->rootContext()->setContextProperty("cacheInfo", &cacheInfo);
 
     #ifdef FREEVERSION
         view->rootContext()->setContextProperty("freeversion", QVariant(true));
@@ -126,12 +157,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         view->rootContext()->setContextProperty("SYMBIAN", QVariant(false));
     #endif
 
-    #ifdef NOSHARE
-        qDebug() << "Verse sharing disabled";
-        view->rootContext()->setContextProperty("NOSHARE", QVariant(true));
-    #else
-        view->rootContext()->setContextProperty("NOSHARE", QVariant(false));
-    #endif
 
 
     #ifdef IAPDONATION
@@ -144,10 +169,31 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     #endif
 
 
+
+    QDeclarativeView* convertDialog = 0;
+    if (cache.oldStorageFound())
+    {
+        convertDialog = new QDeclarativeView();
+        convertDialog->setAttribute(Qt::WA_NoSystemBackground);
+        convertDialog->setSource(QUrl::fromLocalFile(Paths::qmlConvertDialog()));
+        convertDialog->showFullScreen();
+
+        QEventLoop* eventLoop = new QEventLoop;
+        CacheConvertThread* thread = new CacheConvertThread(&cache);
+        QObject::connect(thread, SIGNAL(finished()), eventLoop, SLOT(quit()));
+        thread->start();
+        eventLoop->exec();
+        thread->wait();
+        delete thread;
+        delete eventLoop;
+    }
+
     view->setSource(QUrl::fromLocalFile(Paths::qmlMain()));
 
-
     view->showFullScreen();
+
+    delete convertDialog;
+
 
 
     StartupTracker startupTracker;

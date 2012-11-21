@@ -1,7 +1,7 @@
 import QtQuick 1.1
 
 // for EditBubbleButton
-import "/usr/lib/qt4/imports/com/nokia/meego/" 1.1
+import "/usr/lib/qt4/imports/com/nokia/meego/" 1.0
 
 EditBubbleButton {
     id: button
@@ -25,8 +25,8 @@ EditBubbleButton {
             }
         }
 
-        buttonPaddingLeft : (icon.source != "" ? 10 : 0) + (button.narrow ? 0 : 8)
-        buttonPaddingRight: (icon.source != "" ? 10 : 0) + (button.narrow ? 0 : 8)
+        buttonPaddingLeft : (icon.source != "" ? 10 : 0) + (button.narrow ? -6 : 8)
+        buttonPaddingRight: (icon.source != "" ? 10 : 0) + (button.narrow ? -6 : 8)
     }
 
 

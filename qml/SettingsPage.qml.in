@@ -111,6 +111,28 @@ Page {
                 height: 20
             }
 
+
+            TumblerItem {
+                titleText: qsTr(\"Interface language\")
+                valueText: {
+                    switch (settings.uiLanguage)
+                    {
+                        case \'\': return qsTr(\"System language\")
+                        case \'en\': return qsTr(\"English\")
+                        case \'fi\': return qsTr(\"Finnish\")
+                        case \'it\': return qsTr(\"Italian\")
+                        case \'pt\': return qsTr(\"Portuguese\")
+                        case \'ru\': return qsTr(\"Russian\")
+                        case \'es\': return qsTr(\"Spanish\")
+                        case \'sv\': return qsTr(\"Swedish\")
+                        default: return settings.uiLanguage
+                    }
+                }
+
+                onClicked: uiLanguageDialog.open()
+            }
+
+
             TumblerItem {
                 titleText: qsTr(\"Font\")
                 valueText: settings.fontName
@@ -140,7 +162,7 @@ Page {
             }
 
             LabeledSwitch {
-                text: qsTr(\"Grid place selector\")
+                text: qsTr(\"Table-like book selection\")
 
                 checked: settings.gridPlaceSelector
                 onCheckedChanged: settings.gridPlaceSelector = checked
@@ -154,6 +176,15 @@ Page {
             }
 
 
+            Button {
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                text: qsTr(\"Manage cache\")
+
+                onClicked: cacheInfoPage.open()
+            }
+
+
             ButtonWithHelp {
                 buttonText: qsTr(\"Update translation list\")
                 helpTitle: qsTr(\"Reload languages\")
@@ -163,13 +194,13 @@ Page {
             }
 
 
-            ButtonWithHelp {
-                buttonText: qsTr(\"Clear cache\")
-                helpTitle: qsTr(\"Cache clearing\")
-                helpMessage: qsTr(\"This will delete all downloaded Bible chapters from your phone\")
+            // ButtonWithHelp {
+            //     buttonText: qsTr(\"Clear cache\")
+            //     helpTitle: qsTr(\"Cache clearing\")
+            //     helpMessage: qsTr(\"This will delete all downloaded Bible chapters from your phone\")
 
-                onClicked: clearCacheConfirmation.open()
-            }
+            //     onClicked: clearCacheConfirmation.open()
+            // }
         }
     }
     ScrollDecorator {flickableItem: flickable }
@@ -254,6 +285,43 @@ Page {
     }
 
 
+    ModelSelectionDialog {
+        id: uiLanguageDialog
+
+        titleText: qsTr(\"Interface language\")
+
+        model: ListModel {
+            ListElement { code: \"\";   value: \"System language\" }
+            ListElement { code: \"en\"; value: \"English\" }
+            ListElement { code: \"fi\"; value: \"Finnish\" }
+            ListElement { code: \"it\"; value: \"Italian\" }
+            ListElement { code: \"pt\"; value: \"Portuguese\" }
+            ListElement { code: \"ru\"; value: \"Russian\" }
+            ListElement { code: \"es\"; value: \"Spanish\" }
+            ListElement { code: \"sv\"; value: \"Swedish\" }
+        }
+
+        onAccepted: {
+            var newlang = uiLanguageDialog.model.get(selectedIndex).code
+            if (settings.uiLanguage != newlang)
+            {
+                settings.uiLanguage = newlang
+                restartAppNotice.open()
+            }
+        }
+    }
+
+
+    QueryDialog {
+        id: restartAppNotice
+
+        titleText: qsTr(\"Restart needed\")
+        message: qsTr(\"Please restart MeeBible to apply this setting\")
+
+        acceptButtonText: qsTr(\"OK\")
+    }
+
+
     QueryDialog {
         id: clearCacheConfirmation
 
@@ -268,6 +336,19 @@ Page {
             cache.clearCache()
             settings.translation.reload(false)
             bibleView.reload()
+        }
+    }
+
+
+    Loader {
+        id: cacheInfoPage
+
+        function load() { source = \"CacheInfoPage.qml\" }
+
+        function open() {
+            load()
+            item.update()
+            pageStack.push(item)
         }
     }
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
-<TS language="sv" version="2.0">
+<TS language="en" version="2.0">
 	<context>
 		<name>BibleView</name>
 		<message>
 			<source>Current translation doesn't contain this book</source>
-			<translation>Aktuell översättning innehåller inte den här boken</translation>
+			<translation>Current translation doesn't contain this book</translation>
 		</message>
 		<message>
 			<source>&lt;h3&gt;Cannot load chapter&lt;/h3&gt; Please check your internet connection</source>
-			<translation>&lt;h3&gt;Kan inte ladda kapitel&lt;/h3&gt; Kontrollera din Internet-anslutning</translation>
+			<translation>&lt;h3&gt;Cannot load chapter&lt;/h3&gt; Please check your internet connection</translation>
 		</message>
 	</context>
 	<context>
@@ -22,117 +22,125 @@
 		<name>TranslationDialog</name>
 		<message>
 			<source>Select Translation</source>
-			<translation>Välj Översättning</translation>
+			<translation>Select Translation</translation>
 		</message>
 	</context>
 	<context>
 		<name>SettingsPage</name>
 		<message>
 			<source>Settings</source>
-			<translation>Inställningar</translation>
+			<translation>Settings</translation>
 		</message>
 		<message>
 			<source>Language</source>
-			<translation>Språk</translation>
+			<translation>Language</translation>
 		</message>
 		<message>
 			<source>&lt;not loaded yet&gt;</source>
-			<translation>&lt;inte laddat ännu&gt;</translation>
+			<translation>&lt;not loaded yet&gt;</translation>
 		</message>
 		<message>
 			<source>Translation</source>
-			<translation>Översättning</translation>
+			<translation>Translation</translation>
 		</message>
 		<message>
 			<source>Font</source>
-			<translation>Teckensnitt</translation>
+			<translation>Font</translation>
 		</message>
 		<message>
 			<source>Scroll header with the text</source>
-			<translation>Bläddra rubrik med texten</translation>
+			<translation>Scroll header with the text</translation>
 		</message>
 		<message>
 			<source>Fullscreen</source>
-			<translation>Helskärm</translation>
+			<translation>Fullscreen</translation>
 		</message>
 		<message>
 			<source>Inverted theme</source>
-			<translation>Inverterat tema</translation>
+			<translation>Inverted theme</translation>
 		</message>
 		<message>
 			<source>Copy verses with numbers</source>
-			<translation>Kopiera verser med siffror</translation>
+			<translation>Copy verses with numbers</translation>
 		</message>
 		<message>
 			<source>Update translation list</source>
-			<translation>Uppdatera översättningslista</translation>
+			<translation>Update translation list</translation>
 		</message>
 		<message>
 			<source>Reload languages</source>
-			<translation>Ladda om språk</translation>
+			<translation>Reload languages</translation>
 		</message>
 		<message>
 			<source>When new translation is published on MeeBible's server, use this button to update translation list</source>
-			<translation>När ny översättning publiceras på MeeBibles server, använd denna knapp för att uppdatera översättningslistan</translation>
+			<translation>When new translation is published on MeeBible's server, use this button to update translation list</translation>
 		</message>
 		<message>
 			<source>Clear cache</source>
-			<translation>Töm cache</translation>
+			<translation>Clear cache</translation>
 		</message>
 		<message>
 			<source>Cache clearing</source>
-			<translation>Tömmer cache...</translation>
+			<translation>Cache clearing</translation>
 		</message>
 		<message>
 			<source>Select Font</source>
-			<translation>Välj teckensnitt</translation>
+			<translation>Select Font</translation>
 		</message>
 		<message>
 			<source>Not all fonts can display all languages</source>
-			<translation>Inte alla teckensnitt kan visa alla språk</translation>
+			<translation>Not all fonts can display all languages</translation>
 		</message>
 		<message>
 			<source>Do you want to clear the cache?</source>
-			<translation>Vill du rensa cacheminnet?</translation>
+			<translation>Do you want to clear the cache?</translation>
 		</message>
 		<message>
 			<source>This will delete all downloaded Bible chapters from your phone</source>
-			<translation>Detta kommer att ta bort alla nedladdade Bibelkapitel från telefonen</translation>
+			<translation>This will delete all downloaded Bible chapters from your phone</translation>
 		</message>
 		<message>
 			<source>Clear</source>
-			<translation>Rensa</translation>
+			<translation>Clear</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Avbryt</translation>
+			<translation>Cancel</translation>
 		</message>
 		<message>
 			<source>Available at</source>
-			<translation>Finns på</translation>
+			<translation>Available at</translation>
 		</message>
 		<message>
 			<source>Table-like book selection</source>
-			<translation>Tabell-liknande bokval</translation>
+			<translation>Table-like book selection</translation>
 		</message>
 		<message>
 			<source>Manage cache</source>
-			<translation>Hantera cacheminnet</translation>
+			<translation>Manage cache</translation>
+		</message>
+		<message>
+			<source>Interface language</source>
+			<translation>Interface language</translation>
+		</message>
+		<message>
+			<source>System language</source>
+			<translation>System language</translation>
 		</message>
 	</context>
 	<context>
 		<name>FeedbackPage</name>
 		<message>
 			<source>Feedback</source>
-			<translation>Synpunkter</translation>
+			<translation>Feedback</translation>
 		</message>
 		<message>
 			<source>Your name</source>
-			<translation>Ditt namn</translation>
+			<translation>Your name</translation>
 		</message>
 		<message>
 			<source>Your E-Mail</source>
-			<translation>Din e-post</translation>
+			<translation>Your E-Mail</translation>
 		</message>
 		<message>
 			<source>Comments
@@ -141,32 +149,32 @@ Improvements
 Critics
 New translations
 ...</source>
-			<translation>Kommentarer
-Förslag
-Förbättringar
-Kritiker
-Nya översättningar
+			<translation>Comments
+Suggestions
+Improvements
+Critics
+New translations
 ...</translation>
 		</message>
 		<message>
 			<source>Send</source>
-			<translation>Skicka</translation>
+			<translation>Send</translation>
 		</message>
 		<message>
 			<source>Sending feedback</source>
-			<translation>Skickar feedback...</translation>
+			<translation>Sending feedback</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Avbryt</translation>
+			<translation>Cancel</translation>
 		</message>
 		<message>
 			<source>Feedback sent</source>
-			<translation>Feedback skickat</translation>
+			<translation>Feedback sent</translation>
 		</message>
 		<message>
 			<source>Thank you! Your feedback is highly appreciated. We will answer you as soon as possible.</source>
-			<translation>Tack! Din feedback är mycket uppskattat. Vi kommer att svara dig så fort som möjligt.</translation>
+			<translation>Thank you! Your feedback is highly appreciated. We will answer you as soon as possible.</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -174,57 +182,57 @@ Nya översättningar
 		</message>
 		<message>
 			<source>Sending failed</source>
-			<translation>Att skicka misslyckades</translation>
+			<translation>Sending failed</translation>
 		</message>
 		<message>
 			<source>Your feedback was not sent. Please check internet connection and try again.</source>
-			<translation>Din feedback har inte skickats. Kontrollera internetuppkoppling och försök igen.</translation>
+			<translation>Your feedback was not sent. Please check internet connection and try again.</translation>
 		</message>
 		<message>
 			<source>No E-Mail?</source>
-			<translation>Ingen e-post?</translation>
+			<translation>No E-Mail?</translation>
 		</message>
 		<message>
 			<source>You have not specified E-Mail address. We will not be able to answer you!</source>
-			<translation>Du har inte angett e-postadress. Vi kommer inte att kunna svara dig!</translation>
+			<translation>You have not specified E-Mail address. We will not be able to answer you!</translation>
 		</message>
 		<message>
 			<source>Send anyway</source>
-			<translation>Skicka ändå</translation>
+			<translation>Send anyway</translation>
 		</message>
 		<message>
 			<source>Return to form</source>
-			<translation>Återgå till formulär</translation>
+			<translation>Return to form</translation>
 		</message>
 	</context>
 	<context>
 		<name>BookmarksSheet</name>
 		<message>
 			<source>Bookmarks</source>
-			<translation>Bokmärken</translation>
+			<translation>Bookmarks</translation>
 		</message>
 		<message>
 			<source>Delete</source>
-			<translation>Ta bort</translation>
+			<translation>Delete</translation>
 		</message>
 		<message>
 			<source>No bookmarks yet</source>
-			<translation>Inga bokmärken ännu</translation>
+			<translation>No bookmarks yet</translation>
 		</message>
 	</context>
 	<context>
 		<name>AboutPage</name>
 		<message>
 			<source>About MeeBible</source>
-			<translation>Om MeeBible</translation>
+			<translation>About MeeBible</translation>
 		</message>
 		<message>
 			<source>If you want to support development, please consider buying &lt;a href='http://store.ovi.com/content/215454'&gt;paid version&lt;/a&gt;!</source>
-			<translation>Om du vill stödja utvecklingen, kan du överväga att köpa &lt;a href='http://store.ovi.com/content/215454'&gt;betalda versionen&lt;/a&gt;!</translation>
+			<translation>If you want to support development, please consider buying &lt;a href='http://store.ovi.com/content/215454'&gt;paid version&lt;/a&gt;!</translation>
 		</message>
 		<message>
 			<source>Thank you for supporting development!</source>
-			<translation>Tack för att du stödjer utvecklingen!</translation>
+			<translation>Thank you for supporting development!</translation>
 		</message>
 		<message>
 			<source>© 2011 Ilya Skriblovsky</source>
@@ -232,70 +240,70 @@ Nya översättningar
 		</message>
 		<message>
 			<source>Please contact us with any comments or suggestions or if you want to add new Bible or UI translations.</source>
-			<translation>Kontakta oss gärna med kommentarer eller förslag, eller om du vill lägga till nya Bibel- eller UI-översättningar.</translation>
+			<translation>Please contact us with any comments or suggestions or if you want to add new Bible or UI translations.</translation>
 		</message>
 		<message>
 			<source>Send your feedback</source>
-			<translation>Skicka din feedback</translation>
+			<translation>Send your feedback</translation>
 		</message>
 		<message>
 			<source>Read God's Word daily!</source>
-			<translation>Läs Guds ord dagligen!</translation>
+			<translation>Read God's Word daily!</translation>
 		</message>
 		<message>
 			<source>The open source Bible reader</source>
-			<translation>Öppen källkod Bibelläsare</translation>
+			<translation>The open source Bible reader</translation>
 		</message>
 		<message>
 			<source>Beta testing: Simon Botes of {AppCRAFT}</source>
-			<translation>Betatestare: Simon Botes av {AppCRAFT}</translation>
+			<translation>Beta testing: Simon Botes of {AppCRAFT}</translation>
 		</message>
 		<message>
 			<source>Donate</source>
-			<translation>Donera</translation>
+			<translation>Donate</translation>
 		</message>
 		<message>
 			<source>Thanks for translating UI to:</source>
-			<translation>Tack för att översätta ansökan</translation>
+			<translation>Thanks for translating UI to:</translation>
 		</message>
 		<message>
 			<source>Finnish</source>
-			<translation>Finska</translation>
+			<translation>Finnish</translation>
 		</message>
 		<message>
 			<source>Italian</source>
-			<translation>Italienska</translation>
+			<translation>Italian</translation>
 		</message>
 		<message>
 			<source>Portuguese</source>
-			<translation>Portugisiska</translation>
+			<translation>Portuguese</translation>
 		</message>
 		<message>
 			<source>Russian</source>
-			<translation>Venäjän kieli</translation>
+			<translation>Russian</translation>
 		</message>
 		<message>
 			<source>Spanish</source>
-			<translation>Spanska</translation>
+			<translation>Spanish</translation>
 		</message>
 		<message>
 			<source>Swedish</source>
-			<translation>Svenska</translation>
+			<translation>Swedish</translation>
 		</message>
 	</context>
 	<context>
 		<name>CacheInfoPage</name>
 		<message>
 			<source>Manage cache</source>
-			<translation>Hantera cacheminnet</translation>
+			<translation>Manage cache</translation>
 		</message>
 		<message>
 			<source>Cached in phone's storage:</source>
-			<translation>Cachad i telefonens minne:</translation>
+			<translation>Cached in phone's storage:</translation>
 		</message>
 		<message>
 			<source>The cache is empty</source>
-			<translation>Cacheminnet är tomt</translation>
+			<translation>The cache is empty</translation>
 		</message>
 		<message>
 			<source>Text: {textSize}</source>
@@ -303,30 +311,30 @@ Nya översättningar
 		</message>
 		<message>
 			<source>Text: {textSize}, Search index: {indexSize}</source>
-			<translation>Text: {textSize}, Sökindex: {indexSize}</translation>
+			<translation>Text: {textSize}, Search index: {indexSize}</translation>
 		</message>
 		<message>
 			<source>Delete from cache</source>
-			<translation>Radera från cacheminnet</translation>
+			<translation>Delete from cache</translation>
 		</message>
 		<message>
 			<source>Delete search index only</source>
-			<translation>Ta endast bort sökindex</translation>
+			<translation>Delete search index only</translation>
 		</message>
 	</context>
 	<context>
 		<name>GridPlaceDialog</name>
 		<message>
 			<source>Select book and verse</source>
-			<translation>Välj bok och vers</translation>
+			<translation>Select book and verse</translation>
 		</message>
 		<message>
 			<source>Chapter:</source>
-			<translation>Kapitel:</translation>
+			<translation>Chapter:</translation>
 		</message>
 		<message>
 			<source>Verse:</source>
-			<translation>Vers:</translation>
+			<translation>Verse:</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -337,40 +345,40 @@ Nya översättningar
 		<name>LanguageDialog</name>
 		<message>
 			<source>Select Language</source>
-			<translation>Välj språk</translation>
+			<translation>Select Language</translation>
 		</message>
 	</context>
 	<context>
 		<name>SearchDialog</name>
 		<message>
 			<source>Close</source>
-			<translation>Stäng</translation>
+			<translation>Close</translation>
 		</message>
 		<message>
 			<source>Find</source>
-			<translation>Sök</translation>
+			<translation>Find</translation>
 		</message>
 		<message>
 			<source>Word or phrase</source>
-			<translation>Ord eller fras</translation>
+			<translation>Word or phrase</translation>
 		</message>
 		<message>
 			<source>Nothing found</source>
-			<translation>Ingenting hittades</translation>
+			<translation>Nothing found</translation>
 		</message>
 		<message>
 			<source>Too many results</source>
-			<translation>För många resultat</translation>
+			<translation>Too many results</translation>
 		</message>
 		<message>
 			<source>First {max} displayed</source>
-			<translation>Första {max} visas</translation>
+			<translation>First {max} displayed</translation>
 		</message>
 		<message>
 			<source>Rebuilding index...
 This is one-time operation</source>
-			<translation>Återuppbygger index...
-Detta är en engångsoperation</translation>
+			<translation>Rebuilding index...
+This is one-time operation</translation>
 		</message>
 		<message>
 			<source>Tips</source>
@@ -380,9 +388,9 @@ Detta är en engångsoperation</translation>
 			<source>You can search for multiple words, they will be found even if separated by other words.
 
 Place asterisk after word to find it with all different endings (For example: Proph* for Prophet and Prophecy)</source>
-			<translation>Du kan söka efter flera ord, de kommer att hittas även om de är separerade med andra ord.
+			<translation>You can search for multiple words, they will be found even if separated by other words.
 
-Placera asterisk efter ord för att hitta det med alla olika ändelser (Till exempel: Prof* för Profet och Profetera)</translation>
+Place asterisk after word to find it with all different endings (For example: Proph* for Prophet and Prophecy)</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -393,19 +401,19 @@ Placera asterisk efter ord för att hitta det med alla olika ändelser (Till exe
 		<name>FetcherDialog</name>
 		<message>
 			<source>Downloading Bible</source>
-			<translation>Laddar ner Bibel</translation>
+			<translation>Downloading Bible</translation>
 		</message>
 		<message>
 			<source>Connecting...</source>
-			<translation>Ansluter ...</translation>
+			<translation>Connecting...</translation>
 		</message>
 		<message>
 			<source>Nothing to do</source>
-			<translation>Inget att göra</translation>
+			<translation>Nothing to do</translation>
 		</message>
 		<message>
 			<source>You already have downloaded whole Bible in selected language and translation</source>
-			<translation>Du har redan laddat ner hela Bibeln på valt språk och översättning</translation>
+			<translation>You already have downloaded whole Bible in selected language and translation</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -413,18 +421,18 @@ Placera asterisk efter ord för att hitta det med alla olika ändelser (Till exe
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Avbryt</translation>
+			<translation>Cancel</translation>
 		</message>
 	</context>
 	<context>
 		<name>DonatePage</name>
 		<message>
 			<source>Donation accepted</source>
-			<translation>Donationen accepterat</translation>
+			<translation>Donation accepted</translation>
 		</message>
 		<message>
 			<source>Thank you for supporting MeeBible!</source>
-			<translation>Tack för att du stödjer MeeBible!</translation>
+			<translation>Thank you for supporting MeeBible!</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -432,30 +440,30 @@ Placera asterisk efter ord för att hitta det med alla olika ändelser (Till exe
 		</message>
 		<message>
 			<source>Sorry</source>
-			<translation>Ursäkta</translation>
+			<translation>Sorry</translation>
 		</message>
 		<message>
 			<source>Due to limitations of Nokia Store you can't pay same amount twice. Please choose another amount if you want to donate more.</source>
-			<translation>På grund av begränsningar i Nokia Butik kan du inte betala lika mycket två gånger. Vänligen välj ett annat belopp om du vill donera mer.</translation>
+			<translation>Due to limitations of Nokia Store you can't pay same amount twice. Please choose another amount if you want to donate more.</translation>
 		</message>
 		<message>
 			<source>Donate</source>
-			<translation>Donera</translation>
+			<translation>Donate</translation>
 		</message>
 		<message>
 			<source>You can support further development of MeeBible by donating a small sum</source>
-			<translation>Du kan stödja ytterligare utveckling av MeeBible genom att donera en liten summa pengar</translation>
+			<translation>You can support further development of MeeBible by donating a small sum</translation>
 		</message>
 		<message>
 			<source>Payment will be done via your Nokia Store account</source>
-			<translation>Betalning kommer att ske via ert Nokia Butik-konto</translation>
+			<translation>Payment will be done via your Nokia Store account</translation>
 		</message>
 	</context>
 	<context>
 		<name>SimpleShareDialog</name>
 		<message>
 			<source>Share Bible text</source>
-			<translation>Dela bibeltext</translation>
+			<translation>Share Bible text</translation>
 		</message>
 	</context>
 	<context>
@@ -464,67 +472,67 @@ Placera asterisk efter ord för att hitta det med alla olika ändelser (Till exe
 			<source>MeeBible is converting downloaded texts into the new storage format...
 
 Please wait</source>
-			<translation>MeeBible håller på att omvandla nedladdade texter till det nya lagringsformatet...
+			<translation>MeeBible is converting downloaded texts into the new storage format...
 
-Vänta</translation>
+Please wait</translation>
 		</message>
 	</context>
 	<context>
 		<name>UniSheet</name>
 		<message>
 			<source>Close</source>
-			<translation>Stäng</translation>
+			<translation>Close</translation>
 		</message>
 	</context>
 	<context>
 		<name>BibleViewPage</name>
 		<message>
 			<source>Copy</source>
-			<translation>Kopiera</translation>
+			<translation>Copy</translation>
 		</message>
 		<message>
 			<source>Share</source>
-			<translation>Dela</translation>
+			<translation>Share</translation>
 		</message>
 		<message>
 			<source>Bookmark</source>
-			<translation>Bokmärke</translation>
+			<translation>Bookmark</translation>
 		</message>
 		<message>
 			<source>Bookmarked</source>
-			<translation>Bokmärkt</translation>
+			<translation>Bookmarked</translation>
 		</message>
 		<message>
 			<source>Already in bookmarks</source>
-			<translation>Redan i bokmärken</translation>
+			<translation>Already in bookmarks</translation>
 		</message>
 		<message>
 			<source>Before you start to read, MeeBible has to load translation list from server</source>
-			<translation>Innan du börjar läsa, behöver MeeBible ladda översättningslistan från servern</translation>
+			<translation>Before you start to read, MeeBible has to load translation list from server</translation>
 		</message>
 		<message>
 			<source>Try again</source>
-			<translation>Försök igen</translation>
+			<translation>Try again</translation>
 		</message>
 		<message>
 			<source>Loading chapter</source>
-			<translation>Laddar kapitel</translation>
+			<translation>Loading chapter</translation>
 		</message>
 		<message>
 			<source>Loading translation list</source>
-			<translation>Laddar översättninglista</translation>
+			<translation>Loading translation list</translation>
 		</message>
 		<message>
 			<source>Loading book list</source>
-			<translation>Laddar boklista</translation>
+			<translation>Loading book list</translation>
 		</message>
 		<message>
 			<source>Please notice</source>
-			<translation>Observera</translation>
+			<translation>Please notice</translation>
 		</message>
 		<message>
 			<source>Full-text search works only for downloaded chapters. If you want to search whole Bible you must download it first using the app menu.</source>
-			<translation>Fulltextsökning fungerar bara för nedladdade kapitel. Om du vill söka hela Bibeln måste du först ladda ner den med hjälp av app-menyn.</translation>
+			<translation>Full-text search works only for downloaded chapters. If you want to search whole Bible you must download it first using the app menu.</translation>
 		</message>
 		<message>
 			<source>OK</source>
@@ -532,78 +540,78 @@ Vänta</translation>
 		</message>
 		<message>
 			<source>Cannot load translation list</source>
-			<translation>Kan inte ladda översättningslista</translation>
+			<translation>Cannot load translation list</translation>
 		</message>
 		<message>
 			<source>Please check internet connection</source>
-			<translation>Kontrollera internetanslutning</translation>
+			<translation>Please check internet connection</translation>
 		</message>
 		<message>
 			<source>Done</source>
-			<translation>Klar</translation>
+			<translation>Done</translation>
 		</message>
 		<message>
 			<source>Are you ready to download whole Bible?</source>
-			<translation>Är du redo att ladda ner hela Bibeln?</translation>
+			<translation>Are you ready to download whole Bible?</translation>
 		</message>
 		<message>
 			<source>This may take 10-15 minutes and you'd better do it over Wi-Fi connection</source>
-			<translation>Det kan ta 10-15 minuter och det är bäst att du gör det via Wi-Fi-anslutning</translation>
+			<translation>This may take 10-15 minutes and you'd better do it over Wi-Fi connection</translation>
 		</message>
 		<message>
 			<source>Download</source>
-			<translation>Ladda ner</translation>
+			<translation>Download</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Avbryt</translation>
+			<translation>Cancel</translation>
 		</message>
 		<message>
 			<source>Search</source>
-			<translation>Sök</translation>
+			<translation>Search</translation>
 		</message>
 		<message>
 			<source>Copied</source>
-			<translation>Kopierad</translation>
+			<translation>Copied</translation>
 		</message>
 		<message>
 			<source>Font size</source>
-			<translation>Teckenstorlek</translation>
+			<translation>Font size</translation>
 		</message>
 		<message>
 			<source>Line spacing</source>
-			<translation>Radavstånd</translation>
+			<translation>Line spacing</translation>
 		</message>
 		<message>
 			<source>Download Bible</source>
-			<translation>Ladda ner Bibel</translation>
+			<translation>Download Bible</translation>
 		</message>
 		<message>
 			<source>Settings</source>
-			<translation>Inställningar</translation>
+			<translation>Settings</translation>
 		</message>
 		<message>
 			<source>About MeeBible</source>
-			<translation>Om MeeBible</translation>
+			<translation>About MeeBible</translation>
 		</message>
 		<message>
 			<source>Quit</source>
-			<translation>Avsluta</translation>
+			<translation>Quit</translation>
 		</message>
 	</context>
 	<context>
 		<name>PlaceDialog</name>
 		<message>
 			<source>Select Book</source>
-			<translation>Välj Bok</translation>
+			<translation>Select Book</translation>
 		</message>
 		<message>
 			<source>Chapter:</source>
-			<translation>Kapitel:</translation>
+			<translation>Chapter:</translation>
 		</message>
 		<message>
 			<source>Verse:</source>
-			<translation>Vers:</translation>
+			<translation>Verse:</translation>
 		</message>
 		<message>
 			<source>OK</source>

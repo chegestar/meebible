@@ -14,20 +14,21 @@ class Paths
 public:
     static void init();
 
-    static QString cacheDB();
+    static QString old_cacheDB();
 
     static QString langsDB();
 
     static QString transDB();
 
     static QString qmlMain();
+    static QString qmlConvertDialog();
 
     static QString script_js();
     static QString style_css();
 
     static QString nwt_xslt();
 
-    static QString translationFile(const QString& locale);
+    static QString translationsDir();
 
     static QUrl wsUrl(const QString& path);
 
@@ -36,6 +37,12 @@ public:
 
     static QString indexFile(const Translation* translation);
     static QStringList allIndexFiles();
+
+    static QString storageBasename(const Translation* translation);
+    static QString storageBasename(const QString& transCode, const QString& langCode);
+
+
+    static QDir cacheDir() { return _cacheDir; }
 
 
 private:

@@ -3,9 +3,9 @@ QT += core network xml webkit gui declarative
 
 INCLUDEPATH += src
 
-# DEFINES += DEBUG
+dev: DEFINES += DEBUG
 
-noshare: DEFINES += NOSHARE
+meegoshare: DEFINES += MEEGO_SHARE
 iapdonation: DEFINES += IAPDONATION
 
 free:DEFINES += FREEVERSION
@@ -49,6 +49,13 @@ asyncdb {
 }
 
 
+symbian {
+    INCLUDEPATH += MW_LAYER_SYSTEMINCLUDE
+    LIBS += -L/epoc32/release/armv5/lib -lremconcoreapi
+    LIBS += -L/epoc32/release/armv5/lib -lremconinterfacebase
+}
+
+
 HEADERS +=                      \
     src/Language.h              \
     src/Languages.h             \
@@ -79,7 +86,11 @@ HEADERS +=                      \
     src/SearchResultAccesser.h  \
     src/Highlighter.h           \
     src/SearchQueryParser.h     \
-    src/SearchThread.h
+    src/SearchThread.h          \
+    src/MediakeyCaptureItem.h   \
+    src/IndexRebuildThread.h    \
+    src/CacheStorage.h          \
+    src/CacheInfo.h
 
 iapdonation:HEADERS +=          \
     src/IAPDonation.h
@@ -110,7 +121,10 @@ SOURCES +=                      \
     src/SearchResultAccesser.cpp\
     src/Highlighter.cpp         \
     src/SearchQueryParser.cpp   \
-    src/SearchThread.cpp
+    src/SearchThread.cpp        \
+    src/MediakeyCaptureItem.cpp \
+    src/IndexRebuildThread.cpp  \
+    src/CacheInfo.cpp
 
 iapdonation:SOURCES +=          \
     src/IAPDonation.cpp

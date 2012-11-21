@@ -1,130 +1,130 @@
 <?xml version="1.0" ?>
-<TS language="es" version="2.0">
+<TS language="fi" version="2.0">
 	<context>
 		<name>BibleView</name>
 		<message>
 			<source>Current translation doesn't contain this book</source>
-			<translation>La traduccion actual no contiene este libro</translation>
+			<translation>Nykyinen käännös ei sisällä tätä kirjaa</translation>
 		</message>
 		<message>
 			<source>&lt;h3&gt;Cannot load chapter&lt;/h3&gt; Please check your internet connection</source>
-			<translation>&lt;h3&gt;No se puede cargar el capitulo&lt;/h3&gt; Por favor revisa tu conexion a internet</translation>
+			<translation>&lt;h3&gt;Ei voi ladata luku&lt;/h3&gt; Tarkista Internet-yhteys</translation>
 		</message>
 	</context>
 	<context>
 		<name>HelpButton</name>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 	</context>
 	<context>
 		<name>TranslationDialog</name>
 		<message>
 			<source>Select Translation</source>
-			<translation>Seleccionar traduccion</translation>
+			<translation>Valitse Käännös</translation>
 		</message>
 	</context>
 	<context>
 		<name>SettingsPage</name>
 		<message>
 			<source>Settings</source>
-			<translation>Configuracion</translation>
+			<translation>Asetukset</translation>
 		</message>
 		<message>
 			<source>Language</source>
-			<translation>Idioma</translation>
+			<translation>Kieli</translation>
 		</message>
 		<message>
 			<source>&lt;not loaded yet&gt;</source>
-			<translation>&lt;todavia no ha cargado&gt;</translation>
+			<translation>&lt;ei ole vielä ladattu&gt;</translation>
 		</message>
 		<message>
 			<source>Translation</source>
-			<translation>Traduccion</translation>
+			<translation>Käännös</translation>
 		</message>
 		<message>
 			<source>Font</source>
-			<translation>Letra</translation>
+			<translation>Fontti</translation>
 		</message>
 		<message>
 			<source>Scroll header with the text</source>
-			<translation>Desplazar encabezado con el texto</translation>
+			<translation>Selaa otsikon tekstin mukaan</translation>
 		</message>
 		<message>
 			<source>Fullscreen</source>
-			<translation>Pantalla completa</translation>
+			<translation>Koko näyttö</translation>
 		</message>
 		<message>
 			<source>Inverted theme</source>
-			<translation>Tema invertido</translation>
+			<translation>Käänteinen teema</translation>
 		</message>
 		<message>
 			<source>Copy verses with numbers</source>
-			<translation>Copiar versiculos con numeros</translation>
+			<translation>Kopioi jae numerolla</translation>
 		</message>
 		<message>
 			<source>Update translation list</source>
-			<translation>Actualizar traducciones</translation>
+			<translation>Päivitä käännöslista</translation>
 		</message>
 		<message>
 			<source>Reload languages</source>
-			<translation>Recargar idiomas</translation>
+			<translation>Lataa kielet uudelleen</translation>
 		</message>
 		<message>
 			<source>When new translation is published on MeeBible's server, use this button to update translation list</source>
-			<translation>Cuando una nueva traduccion es publicada en el servidor de MeeBible, use este boton para actualizar la lista de traducciones</translation>
+			<translation>Kun uusi käännös julkaistaan MeeBiblen palvelimelle, käytä tätä painiketta päivittämään käännöslista</translation>
 		</message>
 		<message>
 			<source>Clear cache</source>
-			<translation>Borrar la cache</translation>
+			<translation>Tyhjennä välimuisti</translation>
 		</message>
 		<message>
 			<source>Cache clearing</source>
-			<translation>Borrando cache</translation>
+			<translation>Välimuisti tyhjennetään...</translation>
 		</message>
 		<message>
 			<source>Select Font</source>
-			<translation>Seleccionar letra</translation>
+			<translation>Valitse Fontti</translation>
 		</message>
 		<message>
 			<source>Not all fonts can display all languages</source>
-			<translation>No todas las fuentes pueden mostrar todos los idiomas</translation>
+			<translation>Kaikki fontit eivät voi näyttää kaikkia kieliä</translation>
 		</message>
 		<message>
 			<source>Do you want to clear the cache?</source>
-			<translation>¿Quieres borrar la cacher?</translation>
+			<translation>Haluatko tyhjentää välimuistin?</translation>
 		</message>
 		<message>
 			<source>This will delete all downloaded Bible chapters from your phone</source>
-			<translation>Esto borrara todos los capitulos de Biblia descargados en tu telefono</translation>
+			<translation>Tämä poistaa kaikki ladatut Raamatun luvut puhelimestasi</translation>
 		</message>
 		<message>
 			<source>Clear</source>
-			<translation>Borrar</translation>
+			<translation>Poista</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Cancelar</translation>
+			<translation>Peruuta</translation>
 		</message>
 		<message>
 			<source>Available at</source>
-			<translation>Disponible en</translation>
+			<translation>Saatavilla</translation>
 		</message>
 	</context>
 	<context>
 		<name>FeedbackPage</name>
 		<message>
 			<source>Feedback</source>
-			<translation>Comentarios</translation>
+			<translation>Palaute</translation>
 		</message>
 		<message>
 			<source>Your name</source>
-			<translation>Tu nombre</translation>
+			<translation>Nimesi</translation>
 		</message>
 		<message>
 			<source>Your E-Mail</source>
-			<translation>Tu correo</translation>
+			<translation>Sähköpostiosoitteesi</translation>
 		</message>
 		<message>
 			<source>Comments
@@ -133,90 +133,90 @@ Improvements
 Critics
 New translations
 ...</source>
-			<translation>Comentarios
-Sugerencias
-Mejoras
-Criticas
-Nuevas traducciones
+			<translation>Kommentit
+Ehdotuksia
+Parannuksia
+Kritiikki
+Uudet käännökset
 ...</translation>
 		</message>
 		<message>
 			<source>Send</source>
-			<translation>Enviar</translation>
+			<translation>Lähetä</translation>
 		</message>
 		<message>
 			<source>Sending feedback</source>
-			<translation>Enviar comentario</translation>
+			<translation>Lähetä palautetta...</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Cancelar</translation>
+			<translation>Peruuta</translation>
 		</message>
 		<message>
 			<source>Feedback sent</source>
-			<translation>Comentario enviado</translation>
+			<translation>Lähetetty palaute</translation>
 		</message>
 		<message>
 			<source>Thank you! Your feedback is highly appreciated. We will answer you as soon as possible.</source>
-			<translation>¡Gracias! Tu comentario es muy apreciado. Te responderemos lo mas pronto posible.</translation>
+			<translation>Kiitos! Palautteenne on erittäin tervetullutta. Vastaamme sinulle mahdollisimman pian.</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 		<message>
 			<source>Sending failed</source>
-			<translation>Fallo envio</translation>
+			<translation>Lähettäminen epäonnistui</translation>
 		</message>
 		<message>
 			<source>Your feedback was not sent. Please check internet connection and try again.</source>
-			<translation>Tu comentario no fue enviado. Por favor revisa tu conexion e intenta de nuevo.</translation>
+			<translation>Antamaasi palautetta ei lähetetty. Tarkista Internet-yhteys ja yritä uudelleen.</translation>
 		</message>
 		<message>
 			<source>No E-Mail?</source>
-			<translation>¿No agregaste el correo?</translation>
+			<translation>Ei sähköpostiosoitetta?</translation>
 		</message>
 		<message>
 			<source>You have not specified E-Mail address. We will not be able to answer you!</source>
-			<translation>No has especificado una direccion de correo. ¡No podremos responderte!</translation>
+			<translation>Et ole määritellyt sähköpostiosoitetta. Emme pysty vastaamaan sinulle!</translation>
 		</message>
 		<message>
 			<source>Send anyway</source>
-			<translation>Enviar de todas formas</translation>
+			<translation>Lähetä joka tapauksessa</translation>
 		</message>
 		<message>
 			<source>Return to form</source>
-			<translation>Regresar ak formulario</translation>
+			<translation>Palata muodostamaan</translation>
 		</message>
 	</context>
 	<context>
 		<name>BookmarksSheet</name>
 		<message>
 			<source>Bookmarks</source>
-			<translation>Favoritos</translation>
+			<translation>Kirjanmerkit</translation>
 		</message>
 		<message>
 			<source>Delete</source>
-			<translation>Borrar</translation>
+			<translation>Poistaa</translation>
 		</message>
 		<message>
 			<source>No bookmarks yet</source>
-			<translation>No hay favoritos aun</translation>
+			<translation>Ei kirjanmerkkiä vielä</translation>
 		</message>
 	</context>
 	<context>
 		<name>AboutPage</name>
 		<message>
 			<source>About MeeBible</source>
-			<translation>A cerca de MeeBible</translation>
+			<translation>Tietoja MeeBiblesta</translation>
 		</message>
 		<message>
 			<source>If you want to support development, please consider buying &lt;a href='http://store.ovi.com/content/215454'&gt;paid version&lt;/a&gt;!</source>
-			<translation>Si quieres contribuir al desarrollo de esta aplicacion, por favor considera comprarla &lt;a href='http://store.ovi.com/content/215454'&gt;Version pagada&lt;/a&gt;!</translation>
+			<translation>Jos haluat tukea kehitystä, harkitse ostaa &lt;a href='http://store.ovi.com/content/215454'&gt;maksullinen versio&lt;/a&gt;!</translation>
 		</message>
 		<message>
 			<source>Thank you for supporting development!</source>
-			<translation>!Gracias por contribuir al desarrollo!</translation>
+			<translation>Kiitos kehityksen tukemisesta!</translation>
 		</message>
 		<message>
 			<source>© 2011 Ilya Skriblovsky</source>
@@ -224,47 +224,47 @@ Nuevas traducciones
 		</message>
 		<message>
 			<source>Please contact us with any comments or suggestions or if you want to add new Bible or UI translations.</source>
-			<translation>Por favor contactanos con cualquier comentario o sugerencia, o si quieres agregar una nueva traduccion de la Biblia o traducir la interface de esta aplicacion.</translation>
+			<translation>Ota meihin yhteyttä, ehdota tai kommentoi, jos haluat lisätä uuden Raamatun tai UI käännöksiä.</translation>
 		</message>
 		<message>
 			<source>Send your feedback</source>
-			<translation>Envia tu comentario</translation>
+			<translation>Lähetä palautetta</translation>
 		</message>
 		<message>
 			<source>Read God's Word daily!</source>
-			<translation>¡Lee la Palabra de Dios cada dia!</translation>
+			<translation>Lue Jumalan Sanaa päivittäin!</translation>
 		</message>
 		<message>
 			<source>The open source Bible reader</source>
-			<translation>El lector Biblico de codigo abierto</translation>
+			<translation>Avoimen lähdekoodin Raamatun lukija</translation>
 		</message>
 		<message>
 			<source>Thanks for translating UI to:</source>
-			<translation>Gracias por la traducción de la aplicación</translation>
+			<translation>Kiitos kääntää sovelluksen</translation>
 		</message>
 		<message>
 			<source>Finnish</source>
-			<translation>Finés</translation>
+			<translation>Suomen kieli</translation>
 		</message>
 		<message>
 			<source>Italian</source>
-			<translation>Italiano</translation>
+			<translation>Italian kieli</translation>
 		</message>
 		<message>
 			<source>Portuguese</source>
-			<translation>Portugués</translation>
+			<translation>Portugalin kieli</translation>
 		</message>
 		<message>
 			<source>Russian</source>
-			<translation>Ruso</translation>
+			<translation>Ryska</translation>
 		</message>
 		<message>
 			<source>Spanish</source>
-			<translation>Español</translation>
+			<translation>Espanjan kieli</translation>
 		</message>
 		<message>
 			<source>Swedish</source>
-			<translation>Sueco</translation>
+			<translation>Ruotsin kieli</translation>
 		</message>
 	</context>
 	<context>
@@ -274,71 +274,71 @@ Nuevas traducciones
 		<name>GridPlaceDialog</name>
 		<message>
 			<source>Chapter:</source>
-			<translation>Capitulo:</translation>
+			<translation>Luku:</translation>
 		</message>
 		<message>
 			<source>Verse:</source>
-			<translation>Versiculo:</translation>
+			<translation>Jae:</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 	</context>
 	<context>
 		<name>LanguageDialog</name>
 		<message>
 			<source>Select Language</source>
-			<translation>Seleccionar idioma</translation>
+			<translation>Valitse Kieli</translation>
 		</message>
 	</context>
 	<context>
 		<name>SearchDialog</name>
 		<message>
 			<source>Close</source>
-			<translation>Salir</translation>
+			<translation>Sulje</translation>
 		</message>
 		<message>
 			<source>Nothing found</source>
-			<translation>Nada ha sido encontrado</translation>
+			<translation>Mitään ei löytynyt</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 	</context>
 	<context>
 		<name>FetcherDialog</name>
 		<message>
 			<source>Downloading Bible</source>
-			<translation>Descargando Biblia</translation>
+			<translation>Lataa Raamattu</translation>
 		</message>
 		<message>
 			<source>Connecting...</source>
-			<translation>Conectando...</translation>
+			<translation>Yhdistä...</translation>
 		</message>
 		<message>
 			<source>Nothing to do</source>
-			<translation>Nada que hacer</translation>
+			<translation>Ei mitään tekemistä</translation>
 		</message>
 		<message>
 			<source>You already have downloaded whole Bible in selected language and translation</source>
-			<translation>Ya has descargado la Biblia completa en el idioma y traduccion seleccionada </translation>
+			<translation>Olet jo ladannut koko Raamatun valitulla kielellä ja käännöksellä</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Cancelar</translation>
+			<translation>Peruuta</translation>
 		</message>
 	</context>
 	<context>
 		<name>DonatePage</name>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 	</context>
 	<context>
@@ -351,141 +351,141 @@ Nuevas traducciones
 		<name>UniSheet</name>
 		<message>
 			<source>Close</source>
-			<translation>Salir</translation>
+			<translation>Sulje</translation>
 		</message>
 	</context>
 	<context>
 		<name>BibleViewPage</name>
 		<message>
 			<source>Copy</source>
-			<translation>Copiar</translation>
+			<translation>Kopioi</translation>
 		</message>
 		<message>
 			<source>Share</source>
-			<translation>Compartir</translation>
+			<translation>Jakaa</translation>
 		</message>
 		<message>
 			<source>Bookmark</source>
-			<translation>Favoritos</translation>
+			<translation>Lisää kirjanmerkki</translation>
 		</message>
 		<message>
 			<source>Bookmarked</source>
-			<translation>Agregado a favoritos</translation>
+			<translation>Kirjanmerkiksi</translation>
 		</message>
 		<message>
 			<source>Already in bookmarks</source>
-			<translation>Ya esta en favoritos</translation>
+			<translation>Jo kirjanmerkkinä</translation>
 		</message>
 		<message>
 			<source>Before you start to read, MeeBible has to load translation list from server</source>
-			<translation>Antes de empezar a leer, MeeBible tiene que cargar lista de traducciones de nuestro servidor</translation>
+			<translation>Ennen kuin aloitat lukemaan, MeeBible on ladattava käännöslista palvelimelta</translation>
 		</message>
 		<message>
 			<source>Try again</source>
-			<translation>Intentelo de nuevo</translation>
+			<translation>Yritä uudelleen</translation>
 		</message>
 		<message>
 			<source>Loading chapter</source>
-			<translation>Cargando capitulo</translation>
+			<translation>Ladataan luku</translation>
 		</message>
 		<message>
 			<source>Loading translation list</source>
-			<translation>Cargando lista de traducciones</translation>
+			<translation>Ladataan käännöslista</translation>
 		</message>
 		<message>
 			<source>Loading book list</source>
-			<translation>Cargando lista de libros</translation>
+			<translation>Ladataan teosluettelo</translation>
 		</message>
 		<message>
 			<source>Please notice</source>
-			<translation>Por favor tome en cuenta</translation>
+			<translation>Huomioithan</translation>
 		</message>
 		<message>
 			<source>Full-text search works only for downloaded chapters. If you want to search whole Bible you must download it first using the app menu.</source>
-			<translation>La busqueda de palabras completas funciona solamente para capitulos decargados. Si quieres hacer una busqueda en toda la Biblia debes descargarla primero usando el menu de la aplicacion.</translation>
+			<translation>Koko textin etsiminen toimii vain ladattuissa luvuissa. Jos haluat etsiä koko Raamatun sinun täytyy ladata se ensin käyttäen sovellus valikkoa.</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 		<message>
 			<source>Cannot load translation list</source>
-			<translation>No se puede cargar lista de traducciones</translation>
+			<translation>Ei voi ladata käännöslistaa</translation>
 		</message>
 		<message>
 			<source>Please check internet connection</source>
-			<translation>Por favor chequea tu conexion a internet</translation>
+			<translation>Tarkista Internetyhteys</translation>
 		</message>
 		<message>
 			<source>Done</source>
-			<translation>Completado</translation>
+			<translation>Valmis</translation>
 		</message>
 		<message>
 			<source>Are you ready to download whole Bible?</source>
-			<translation>¿Estas listo para descargar la Biblia completa?</translation>
+			<translation>Oletko valmis lataamaan koko Raamatun?</translation>
 		</message>
 		<message>
 			<source>This may take 10-15 minutes and you'd better do it over Wi-Fi connection</source>
-			<translation>Esto puede tomar 10-15 minutos y es mejor que lo hagas con una conexion Wi-Fi</translation>
+			<translation>Tämä voi kestää 10-15 minuuttia ja teidän on parasta tehdä se Wi-Fi-yhteydellä</translation>
 		</message>
 		<message>
 			<source>Download</source>
-			<translation>Descargar</translation>
+			<translation>Lataa</translation>
 		</message>
 		<message>
 			<source>Cancel</source>
-			<translation>Cancelar</translation>
+			<translation>Peruuttaa</translation>
 		</message>
 		<message>
 			<source>Search</source>
-			<translation>Buscar</translation>
+			<translation>Etsi</translation>
 		</message>
 		<message>
 			<source>Copied</source>
-			<translation>Copiado</translation>
+			<translation>Kopioitu</translation>
 		</message>
 		<message>
 			<source>Font size</source>
-			<translation>Tamaño de letra</translation>
+			<translation>Fonttikoko</translation>
 		</message>
 		<message>
 			<source>Line spacing</source>
-			<translation>Espaciado</translation>
+			<translation>Riviväli</translation>
 		</message>
 		<message>
 			<source>Download Bible</source>
-			<translation>Descargar Biblia</translation>
+			<translation>Lataa Raamattu</translation>
 		</message>
 		<message>
 			<source>Settings</source>
-			<translation>Configuracion</translation>
+			<translation>Asetukset</translation>
 		</message>
 		<message>
 			<source>About MeeBible</source>
-			<translation>A cerca de MeeBible</translation>
+			<translation>Tietoja MeeBiblesta</translation>
 		</message>
 		<message>
 			<source>Quit</source>
-			<translation>Salir</translation>
+			<translation>Lopettaa</translation>
 		</message>
 	</context>
 	<context>
 		<name>PlaceDialog</name>
 		<message>
 			<source>Select Book</source>
-			<translation>Seleccionar libro</translation>
+			<translation>Valitse Kirja</translation>
 		</message>
 		<message>
 			<source>Chapter:</source>
-			<translation>Capitulo:</translation>
+			<translation>Luku:</translation>
 		</message>
 		<message>
 			<source>Verse:</source>
-			<translation>Versiculo:</translation>
+			<translation>Jae:</translation>
 		</message>
 		<message>
 			<source>OK</source>
-			<translation>Aceptar</translation>
+			<translation>OK</translation>
 		</message>
 	</context>
 </TS>

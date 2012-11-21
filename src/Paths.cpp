@@ -51,7 +51,7 @@ void Paths::init()
 }
 
 
-QString Paths::cacheDB()
+QString Paths::old_cacheDB()
 {
     return correctSlashes(_cacheDir.filePath("cache.sqlite"));
 }
@@ -73,6 +73,11 @@ QString Paths::qmlMain()
     return correctSlashes(_qmlDir.filePath("main.qml"));
 }
 
+QString Paths::qmlConvertDialog()
+{
+    return correctSlashes(_qmlDir.filePath("ConvertDialog.qml"));
+}
+
 
 QString Paths::script_js()
 {
@@ -90,9 +95,9 @@ QString Paths::nwt_xslt()
 }
 
 
-QString Paths::translationFile(const QString& locale)
+QString Paths::translationsDir()
 {
-    return correctSlashes(_translationsDir.filePath(QString("meebible_%1").arg(locale)));
+    return _translationsDir.path();
 }
 
 
@@ -144,4 +149,14 @@ QStringList Paths::allIndexFiles()
     foreach (const QString& basename, files)
         result.append(correctSlashes(_cacheDir.filePath(basename)));
     return result;
+}
+
+
+QString Paths::storageBasename(const Translation* translation)
+{
+    return correctSlashes(_cacheDir.filePath(translation->code() + "_" + translation->language()->code()));
+}
+QString Paths::storageBasename(const QString& transCode, const QString& langCode)
+{
+    return correctSlashes(_cacheDir.filePath(transCode + "_" + langCode));
 }

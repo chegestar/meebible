@@ -25,7 +25,10 @@ QMAKE_SUBSTITUTES += \
     qml/BookGridDelegate.qml.in     \
     qml/GridPlaceDialog.qml.in      \
     qml/CoupledMenuItems.qml.in     \
-    qml/DonatePage.qml.in
+    qml/DonatePage.qml.in           \
+    qml/ConvertDialog.qml.in        \
+    qml/CacheInfoPage.qml.in        \
+    qml/SimpleShareDialog.qml.in
 
 symbian {
     QML_IMPORT_QTCOMPONENTS = "import com.nokia.symbian 1.1"
